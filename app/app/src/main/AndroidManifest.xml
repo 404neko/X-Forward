@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <queries>
+        <package android:name="com.twitter.android" />
+    </queries>
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@android:style/Theme.Translucent.NoTitleBar"
+        tools:targetApi="31">
+
+        <activity
+            android:name=".LaunchActivity"
+            android:documentLaunchMode="never"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter android:autoVerify="false">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:host="x.com" />
+                <data android:host="www.x.com" />
+                <data android:host="mobile.x.com" />
+                <data android:pathPattern="/.*" />
+            </intent-filter>
+            <intent-filter android:autoVerify="false">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="https" />
+                <data android:host="ads.x.com" />
+                <data android:pathPrefix="/mobile" />
+            </intent-filter>
+            <intent-filter android:autoVerify="false">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="https" />
+                <data android:host="analytics.x.com" />
+                <data android:pathPrefix="/user" />
+            </intent-filter>
+            <intent-filter android:autoVerify="false">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="https" />
+                <data android:host="x.app.link" />
+                <data android:host="x-alternate.app.link" />
+                <data android:host="x.test-app.link" />
+                <data android:host="x-alternate.test-app.link" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="x" />
+                <data android:host="account" />
+                <data android:host="articles" />
+                <data android:host="bouncer" />
+                <data android:host="broadcasts" />
+                <data android:host="call" />
+                <data android:host="camera" />
+                <data android:host="canon" />
+                <data android:host="change_conversation_control" />
+                <data android:host="chat" />
+                <data android:host="collection" />
+                <data android:host="communities" />
+                <data android:host="connect_people" />
+                <data android:host="custom-timelines" />
+                <data android:host="digest" />
+                <data android:host="explore" />
+                <data android:host="fleets" />
+                <data android:host="follow" />
+                <data android:host="followed_topics" />
+                <data android:host="follower_requests" />
+                <data android:host="front" />
+                <data android:host="golive" />
+                <data android:host="immersive_timeline" />
+                <data android:host="interest_picker" />
+                <data android:host="landing" />
+                <data android:host="list" />
+                <data android:host="lists" />
+                <data android:host="login_challenge_redirect" />
+                <data android:host="login-token" />
+                <data android:host="login" />
+                <data android:host="mentions" />
+                <data android:host="messages" />
+                <data android:host="moment" />
+                <data android:host="moments" />
+                <data android:host="news" />
+                <data android:host="notes" />
+                <data android:host="notifications_system_prompt" />
+                <data android:host="notifications" />
+                <data android:host="onboarding" />
+                <data android:host="open" />
+                <data android:host="photo" />
+                <data android:host="post" />
+                <data android:host="professionals" />
+                <data android:host="profile_spotlight" />
+                <data android:host="quote" />
+                <data android:host="safety_education_prompt" />
+                <data android:host="safety_mode" />
+                <data android:host="search-home" />
+                <data android:host="search" />
+                <data android:host="settings" />
+                <data android:host="shopping" />
+                <data android:host="signup" />
+                <data android:host="spaces" />
+                <data android:host="spotlight_settings" />
+                <data android:host="status" />
+                <data android:host="switch_to_logged_in_account" />
+                <data android:host="teams_invitation" />
+                <data android:host="timeline" />
+                <data android:host="tipjar" />
+                <data android:host="topics" />
+                <data android:host="trends" />
+                <data android:host="tweet_notifications_timeline" />
+                <data android:host="tweet_previews" />
+                <data android:host="tweet" />
+                <data android:host="unfollow" />
+                <data android:host="user" />
+                <data android:host="wallet" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="x" />
+                <data android:host="twtr.sng.link" />
+                <data android:pathPattern="/.*" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="x" />
+                <data android:host="hashtag" />
+                <data android:host="internal" />
+                <data android:pathPattern="/.*" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="x" />
+                <data android:host="intent" />
+                <data android:pathPrefix="/favorite" />
+                <data android:pathPrefix="/follow" />
+                <data android:pathPrefix="/like" />
+                <data android:pathPrefix="/retweet" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="x" />
+                <data android:host="session" />
+                <data android:pathPrefix="/new" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="x" />
+                <data android:host="thread" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="x" />
+                <data android:host="moments" />
+                <data android:pathPrefix="/guide" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="x" />
+                <data android:host="moments" />
+                <data android:pathPrefix="/list" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="x" />
+                <data android:host="moments" />
+                <data android:pathPrefix="/maker" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="x" />
+                <data android:host="events" />
+                <data android:pathPattern="/tv_show/.*" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="x" />
+                <data android:host="alerts" />
+                <data android:pathPattern="/landing_page/.*" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="x" />
+                <data android:host="live" />
+                <data android:pathPattern="/timeline/.*" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="x" />
+                <data android:host="topics_timeline" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="x" />
+                <data android:host="fs" />
+                <data android:host="featureswitch" />
+                <data android:host="featureswitches" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="x" />
+                <data android:host="events" />
+                <data android:pathPattern="/timeline/.*" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="x" />
+                <data android:host="followers" />
+                <data android:pathPrefix="/verified" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="x" />
+                <data android:host="dm_conversation" />
+                <data android:host="share_via_dm" />
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="x" />
+                <data android:host="profiles" />
+                <data android:pathPrefix="/edit" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="x" />
+                <data android:host="profiles" />
+                <data android:pathPrefix="/about" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="x" />
+                <data android:host="people_address_book" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="x" />
+                <data android:host="flow" />
+                <data android:pathPrefix="/setup_profile" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="x" />
+                <data android:host="badge_violations" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="x" />
+                <data android:host="subscriptions" />
+                <data android:pathPrefix="/join" />
+                <data android:pathPrefix="/labs" />
+                <data android:pathPrefix="/settings/app-icon" />
+                <data android:pathPrefix="/settings/custom-navigation" />
+                <data android:pathPrefix="/settings/early_access" />
+                <data android:pathPrefix="/settings/extras" />
+                <data android:pathPrefix="/settings/news" />
+                <data android:pathPrefix="/settings/undo-tweet" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="x" />
+                <data android:host="communities" />
+                <data android:pathPattern="/create" />
+                <data android:pathPattern="/suggested" />
+                <data android:pathPattern="/.*" />
+                <data android:pathPattern="/.*/about" />
+                <data android:pathPattern="/.*/latest" />
+                <data android:pathPattern="/.*/rules" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="x" />
+                <data android:host="settings" />
+                <data android:pathPrefix="/professional_profile" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="x" />
+                <data android:host="spotlight_settings" />
+                <data android:pathPrefix="/shop" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="x" />
+                <data android:host="professionals" />
+                <data android:pathPrefix="/contact_sheet" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="x" />
+                <data android:host="bookmarks" />
+                <data android:pathPrefix="/all" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
